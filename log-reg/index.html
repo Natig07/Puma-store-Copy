@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Log in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../bootstrap.css"> -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../images/puma-2-favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class=" mt-5 user-div">
+        <h1 class="text-light mt-3">Welcome to our Website!</h1>
+        <p class="text-white mt-5">Click below to create or enter your account</p>
+        <img class="bg-cart" src="../images/DeWatermark.ai_1722336102287.png" alt="bacground ecoomerce">
+        <img class="puma" src="../images/istockphoto-160537937-612x612-removebg-preview (1).png" alt="Puma logo">
+        <button class="btn btn-secondary border-dark " data-toggle="modal" data-target="#register" onclick="this.blur();">Register</button>
+        <button id="logg_btn" class="btn btn-dark border-light mx-4 " data-toggle="modal" data-target="#login" onclick="this.blur();">Login</button>
+    </div>
+
+    <div class="modal fade" id="register">
+        <div class="modal-dialog ">
+            <div class="modal-content bg-dark">
+                <div class="modal-header ">
+                    <h2 class="text-light">Register</h2>
+                    <button id="reg_close" class="close text-danger pr-3 text-center" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-light">
+                    <form class="form" id="register_form">
+                        <div class="form-group">
+                            <label for="fullname_input">Fullname</label>
+                            <input required type="text" class="form-control" id="fullname_input" placeholder="Enter fullname..">
+                            <span id="error_message4" style="color:red;"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="user_reg_input">Username</label>
+                            <input type="text" class="form-control" id="user_reg_input" placeholder="Enter username..">
+                            <span id="error_message1" style="color:red;"></span>
+                        </div>
+                        <div class="form-group position-relative">
+                            <label for="reg_psswrd_input">Set Password</label>
+                            <input required type="password" id="reg_psswrd_input" class="form-control pr-5" placeholder="Enter password.."><i class=" eye fa-regular fa-eye"></i>
+                            <span id="error_message2" style="color:red;"></span>
+                        </div>
+                        <div class="form-group position-relative">
+                            <label for="re_pswrd">Re-Password</label>
+                            <input required type="password" class="form-control pr-5" id="re_pswrd" placeholder="Enter password again.."><i class=" eye fa-regular fa-eye"></i>
+                            <span id="error_message3" style="color:red;"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark w-25" data-dismiss="modal" data-toggle="modal" data-target="#login">Login</button>
+                    <button class="btn btn-dark w-25" id="reg_btn">Register now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content position-relative bg-dark">
+                <div class="modal-header text-light">
+                    <h2>Login your account</h2>
+                    <button id="login_close" class="close text-danger pr-3 text-center" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-light">
+                    <form class="form" id="login_form">
+                        <div class="form-group">
+                            <label for="user_log_input">Username</label>
+                            <input required type="text" class="form-control" id="user_log_input" placeholder="Enter username..">
+                            <span id="logerror1" style="color:red;"></span>
+                        </div>
+                        <div class="form-group position-relative">
+                            <label for="log_psswrd_input">Password</label>
+                            <input required type="password" id="log_psswrd_input" class="form-control" placeholder="Enter your password.."><i class=" eye fa-regular fa-eye"></i>
+                            <span id="logerror2" style="color:red;"></span>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark w-25" data-dismiss="modal" data-toggle="modal" data-target="#register">Register now</button>
+                    <button class="btn btn-dark w-25" id="log_btn">Login</button>
+                </div>
+                <div class="alert alert-success w-75  informative-div alert-box">
+                    Welcome Back!
+                </div>
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./reg-log-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <!-- <script src="../bootjs-1.js"></script>
+    <script src="../bootjs-2.js"></script>
+    <script src="../bootjs-3.js"></script> -->
+</body>
+
+</html>
